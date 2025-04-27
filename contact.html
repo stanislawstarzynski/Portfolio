@@ -1,4 +1,3 @@
-<!-- contact.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Stanisław Starzyński</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* EXTRA styling to improve the form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background-color: #4c6ef5;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #3b5bdb;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -17,29 +58,31 @@
     <a href="skills.html">Skills & Achievements</a>
     <a href="contact.html">Contact</a>
 </nav>
+
 <main>
-    <section>
+    <section class="contact-form">
         <h2>Let's Get in Touch!</h2>
-        <form action="#" method="post">
-            <label>Name:</label>
-            <input type="text" name="name" required>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required>
 
-            <label>Email:</label>
-            <input type="email" name="email" required>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
 
-            <label>Message:</label>
-            <textarea name="message" rows="5" required></textarea>
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" rows="5" required></textarea>
 
-            <button type="submit">Send</button>
+            <button type="submit">Send Message</button>
         </form>
     </section>
 
-    <section>
+    <section style="text-align: center; margin-top: 2rem;">
         <h2>Alternatively, Reach Me Here:</h2>
         <p>Email: <a href="mailto:stasiek601@gmail.com">stasiek601@gmail.com</a></p>
         <p>LinkedIn: <a href="#">LinkedIn Profile</a></p>
     </section>
 </main>
+
 <footer>
     <p>&copy; 2025 Stanisław Starzyński. All rights reserved.</p>
 </footer>
